@@ -1,5 +1,5 @@
 # Start from the base image
-FROM devxio/ansible:latest
+FROM devxio/ansible:develop
 
 # Set maintainer label
 LABEL maintainer="github@dev-x.io"
