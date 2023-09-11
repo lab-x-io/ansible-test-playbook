@@ -1,5 +1,5 @@
 # Start from the base image
-FROM devxio/ansible:develop
+FROM devxio/ansible:latest
 
 # Set maintainer label
 LABEL maintainer="github@dev-x.io"
@@ -8,9 +8,7 @@ LABEL maintainer="github@dev-x.io"
 RUN chown -R ansible /ansible
 
 # Clone the ansible-test-playbook repository from GitHub
-RUN git clone https://github.com/lab-x-io/ansible-test-playbook.git /ansible && \
-    cd /ansible && \
-    git checkout develop
+RUN git clone https://github.com/lab-x-io/ansible-test-playbook.git /ansible
 
 # Set the working directory to the cloned repository
 WORKDIR /ansible
