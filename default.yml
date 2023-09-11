@@ -1,0 +1,6 @@
+
+---
+- name: Verzamel informatie over hosts playbook
+  hosts:  "{{ hostgroup | default('localhost') }}"
+  roles:
+    - gather_info

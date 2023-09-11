@@ -1,0 +1,10 @@
+
+---
+# Deze taak verzamelt basisinformatie van de host
+- name: Verzamel feiten van de host
+  setup:
+
+# Deze taak print de hostnaam voor debugdoeleinden
+- name: Print hostnaam
+  debug:
+    msg: "De hostnaam is {{ ansible_hostname }}"
