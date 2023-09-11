@@ -5,7 +5,7 @@ FROM devxio/ansible:latest
 LABEL maintainer="github@dev-x.io"
 
 # Ensure the ansible user owns the ansible directory
-RUN chown -R ansible /ansible
+RUN sudo chown -R ansible /ansible
 
 # Clone the ansible-test-playbook repository from GitHub
 RUN git clone https://github.com/lab-x-io/ansible-test-playbook.git /ansible
