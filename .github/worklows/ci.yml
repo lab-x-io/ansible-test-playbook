@@ -16,6 +16,7 @@ on:
     branches:
       - main
 
+
 # De daadwerkelijke taken die worden uitgevoerd.
 jobs:
   docker:
