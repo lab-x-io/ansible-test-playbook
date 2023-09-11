@@ -1,0 +1,9 @@
+version: '3.8'
+
+services:
+  ansible-test:
+    image: devxio/ansible:latest
+    container_name: labxio_test_container
+    volumes:
+      - ./playbooks:/ansible/playbooks
+      # - ~/.ssh:/home/ansible/.ssh # Uncomment if you want to use your own ssh keys
