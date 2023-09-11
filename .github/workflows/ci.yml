@@ -29,7 +29,7 @@ jobs:
       # Verkrijg de naam van deze repository zonder het "docker-" voorvoegsel.
       - name: Haal de naam van de repository op
         id: repo_name
-        run: echo "::set-output name=image_name::$(echo ${{ github.repository }} | sed -e 's#.*/docker-##')"
+        run: echo "::set-output name=image_name::$(echo ${{ github.repository }} | sed -e 's#.*/##')"
 
       # Bereid Docker voor om efficiëntere builds te gebruiken met "Buildx".
       - name: Bereid Docker voor
