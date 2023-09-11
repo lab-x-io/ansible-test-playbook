@@ -8,7 +8,9 @@ LABEL maintainer="github@dev-x.io"
 RUN sudo chown ansible:ansible /ansible
 
 # Clone the ansible-test-playbook repository from GitHub
-RUN git clone https://github.com/lab-x-io/ansible-test-playbook.git /ansible
+RUN git clone https://github.com/lab-x-io/ansible-test-playbook.git /ansible && \
+    cd /ansible && \
+    git checkout develop
 
 # Set the working directory to the cloned repository
 WORKDIR /ansible
